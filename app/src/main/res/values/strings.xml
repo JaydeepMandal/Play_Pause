@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Play_Pause</string>
+    <string name="startValue">0:00 </string>
+</resources>
