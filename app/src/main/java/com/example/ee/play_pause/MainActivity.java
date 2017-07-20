@@ -63,14 +63,15 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.imageButton3:
                 if(mp.isPlaying()){
-                    mp.seekTo(0);
-                    mp.pause();
+                    mp.stop();
                     pauseBtn.setVisibility(View.INVISIBLE);
                     playBtn.setVisibility(View.VISIBLE);
                 }
                 else {
-                    mp.seekTo(0);
+                    mp.stop();
                 }
+                mp.release();
+                mp = MediaPlayer.create(getApplicationContext(),R.raw.radio_tublite);
                 break;
             case R.id.forwardButton:
                 mp.seekTo(mp.getCurrentPosition()+5000);
